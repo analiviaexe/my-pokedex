@@ -1,0 +1,20 @@
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px
+}
+
+header a{
+    text-decoration: none;
+}
+
+img {
+    width: 280px;
+}
+
+@media screen and (max-width: 900px) {
+    img {
+        width: 250px;
+    }
+}

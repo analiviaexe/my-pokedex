@@ -1,0 +1,37 @@
+.poke-card{
+    width: 320px;
+    height: 200px;
+    background-color: cadetblue;
+    border-radius: 10px;
+    margin: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    white-space: nowrap;
+}
+
+a {
+    text-decoration: none;
+    color: inherit; 
+}
+
+.poke-attribute {
+    background-color: #EFEFEF;
+    border-radius: 5px;
+}
+
+.poke-name {
+    text-transform: capitalize; 
+    font-size: 1.5em;
+}
+
+img{
+    width: 150px;
+    height: 150px;
+}
+
+/* @media screen and (max-width: 900px) {
+    .poke-card{
+        width: 200px;
+    }
+} */

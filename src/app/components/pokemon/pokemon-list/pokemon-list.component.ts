@@ -1,7 +1,7 @@
 import { Observable } from 'rxjs';
-import { PokemonService } from './../../pokemon.service';
-import { Pokemon } from '../../pokemon.model';
+import { Pokemon } from '../pokemon.model';
 import { Component, OnInit } from '@angular/core';
+import { PokemonService } from '../pokemon.service';
 
 @Component({
   selector: 'app-pokemon-list',
@@ -11,7 +11,6 @@ import { Component, OnInit } from '@angular/core';
 export class PokemonListComponent implements OnInit {
 
   pokemons: Pokemon[];
-  pokemon: Pokemon;
 
   constructor(private pokemonService: PokemonService) { }
 
@@ -20,9 +19,16 @@ export class PokemonListComponent implements OnInit {
   }
 
   getAllPokemons(): void{
-    this.pokemonService.getAllPokemons().subscribe(pokemons => {
-      this.pokemons = pokemons.results;
+    this.pokemonService.setAllPokemons().subscribe(() => {
+      this.pokemons = this.pokemonService.listaPokemon;
+      this.pokemons = this.sortingPokemons(this.pokemons);
       console.log(this.pokemons);
     })
+  }
+
+  sortingPokemons(pokemons: Pokemon[]): Pokemon[]{
+    return pokemons.sort((a, b) => {
+      return b.id - a.id;
+    });
   }
 }

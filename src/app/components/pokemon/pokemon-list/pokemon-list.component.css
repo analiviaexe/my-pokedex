@@ -1,0 +1,16 @@
+.poke-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: auto;
+    width: 65%;
+}
+
+/* @media screen and (max-width: 900px) {
+    .poke-list{
+        width: 85%
+    }
+} */

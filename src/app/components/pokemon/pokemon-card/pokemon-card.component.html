@@ -1,4 +1,12 @@
-<div>
-    <p>{{ pokemon.name }}</p>
-    <p>{{ pokemon.id }}</p>
+<a routerLink="/">
+<div class="poke-card">
+        <div class="poke-info">
+            <p class="poke-name">{{ pokemon.name }}</p>
+            <p class="poke-attribute">grass</p>
+            <p class="poke-attribute">aqua</p>
+        </div>
+        <div class="poke-view">
+            <img [src]="pokemon.img" alt="logo">
+        </div>
 </div>
+</a>

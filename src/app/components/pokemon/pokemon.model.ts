@@ -2,5 +2,6 @@ export interface Pokemon {
     id: number,
     name: string,
     stats: string[],
-    types: string[]
+    types: string[],
+    img: string
 }
